@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="stock_navy">#132238</color>
+    <color name="stock_teal">#16B8A6</color>
+    <color name="stock_teal_dark">#0D9488</color>
+
+    <color name="stock_background">#F3F6FA</color>
+    <color name="stock_white">#FFFFFF</color>
+    <color name="stock_text">#243247</color>
+    <color name="stock_muted">#718096</color>
+    <color name="stock_border">#DFE6EE</color>
+
+    <color name="stock_success_bg">#E7F8F3</color>
+    <color name="stock_danger">#C2414B</color>
+    <color name="stock_danger_bg">#FFF0F1</color>
+    <color name="stock_purple">#6D28D9</color>
+</resources>

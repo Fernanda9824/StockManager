@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_stock_screen"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- CABECERA MORADA DE STOCKMANAGER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_stock_header"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SM  |  StockManager"
+                android:textColor="@color/stock_white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:letterSpacing="0.05"
+                android:text="CONTROL INTELIGENTE DE INVENTARIO"
+                android:textColor="#80E6D5"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Tu inventario, bajo control."
+                android:textColor="@color/stock_white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Administra las entradas y salidas de tus productos por almacén."
+                android:textColor="#C7D5E5"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- ESTADO DE SINCRONIZACIÓN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_stock_card"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="ESTADO DE SINCRONIZACIÓN"
+                android:textColor="@color/stock_muted"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPendientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_stock_status"
+                android:padding="14dp"
+                android:text="Movimientos pendientes de sincronización: 0"
+                android:textColor="@color/stock_navy"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- FORMULARIO DE MOVIMIENTOS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_stock_card"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrar movimiento"
+                android:textColor="@color/stock_text"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:text="Completa los datos para registrar una entrada o salida."
+                android:textColor="@color/stock_muted"
+                android:textSize="14sp" />
+
+            <!-- NOMBRE DEL ALMACÉN -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del almacén"
+                android:textColor="@color/stock_text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etAlmacen"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_stock_input"
+                android:hint="Ej. Almacén Central"
+                android:inputType="textCapWords"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:singleLine="true"
+                android:textColor="@color/stock_text"
+                android:textColorHint="@color/stock_muted"
+                android:textSize="15sp" />
+
+            <!-- CÓDIGO DEL PRODUCTO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Código del producto"
+                android:textColor="@color/stock_text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_stock_input"
+                android:hint="Ej. PROD001"
+                android:inputType="textCapCharacters"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:singleLine="true"
+                android:textColor="@color/stock_text"
+                android:textColorHint="@color/stock_muted"
+                android:textSize="15sp" />
+
+            <!-- CANTIDAD -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cantidad de unidades"
+                android:textColor="@color/stock_text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_stock_input"
+                android:hint="Ej. 10"
+                android:inputType="number"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:singleLine="true"
+                android:textColor="@color/stock_text"
+                android:textColorHint="@color/stock_muted"
+                android:textSize="15sp" />
+
+            <!-- REGISTRAR ENTRADA -->
+            <Button
+                android:id="@+id/btnEntrada"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_stock_primary"
+                android:backgroundTint="@null"
+                android:text="＋  Registrar entrada"
+                android:textAllCaps="false"
+                android:textColor="@color/stock_navy"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- REGISTRAR SALIDA -->
+            <Button
+                android:id="@+id/btnSalida"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_stock_secondary"
+                android:backgroundTint="@null"
+                android:text="−  Registrar salida"
+                android:textAllCaps="false"
+                android:textColor="@color/stock_white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- CONSULTAR EXISTENCIAS -->
+            <Button
+                android:id="@+id/btnConsultarExistencias"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_stock_secondary"
+                android:backgroundTint="@null"
+                android:text="Consultar existencias"
+                android:textAllCaps="false"
+                android:textColor="@color/stock_white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvExistencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_stock_status"
+                android:padding="14dp"
+                android:text="Selecciona un producto para consultar sus existencias."
+                android:textColor="@color/stock_navy"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- GESTIÓN DE MOVIMIENTOS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            android:letterSpacing="0.05"
+            android:text="GESTIÓN DE MOVIMIENTOS"
+            android:textColor="@color/stock_muted"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- ACTUALIZAR -->
+        <Button
+            android:id="@+id/btnActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_stock_secondary"
+            android:backgroundTint="@null"
+            android:text="Selecciona el movimiento a actualizar"
+            android:textAllCaps="false"
+            android:textColor="@color/stock_white"
+            android:textSize="14sp" />
+
+        <!-- ELIMINAR -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_stock_danger"
+            android:backgroundTint="@null"
+            android:text="Selecciona el movimiento a eliminar"
+            android:textAllCaps="false"
+            android:textColor="@color/stock_danger"
+            android:textSize="14sp" />
+
+        <!-- MENSAJE DE ESTADO -->
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_stock_status"
+            android:padding="14dp"
+            android:text="Listo para registrar movimientos."
+            android:textColor="@color/stock_navy"
+            android:textSize="14sp" />
+
+        <!-- HISTORIAL DE MOVIMIENTOS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_stock_card"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Historial de movimientos"
+                android:textColor="@color/stock_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="16dp"
+                android:text="Consulta las entradas y salidas por fecha y almacén."
+                android:textColor="@color/stock_muted"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvMovimientos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="60dp"
+                android:lineSpacingExtra="5dp"
+                android:text="Todavía no hay movimientos registrados."
+                android:textColor="@color/stock_text"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
